@@ -4,28 +4,45 @@ body {
 
 #frame {
     display:flex;
-    height: 960px;
+    margin: auto;
     width: 960px;
+    height: 960px;
     border: 0px solid rgb(0, 0, 0);
     flex-direction: column;
-    margin: auto;
+}
+@media only screen and (max-width: 960px) {
+    
+    #frame {
+        width: 100% ;
+        height: width;
+    }
 }
 
-button{
+
+button {
     display:flex;
     margin:auto;
+    background-color:rgb(163, 163, 163);
+    border:1px solid black;
 }
+
+button:hover {
+    background-color: black;
+    color: rgb(163, 163, 163);
+}
+
 
 .row {
     display:flex;
     background-color:limegreen;
-    size: max-content;
+    height: 50%;
 }
 
 .cell {
     display:flex;
-    height: 58px;
-    width: 58px;
+    width: fit-content;
+    height: fit-content;
+    flex-grow: 1;
     background-color:rgb(163,163,163);
     border: 1px solid rgb(163,163,163);
     
