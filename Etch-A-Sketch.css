@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(163, 163, 163);
+}
+
+#frame {
+    display:flex;
+    height: 960px;
+    width: 960px;
+    border: 0px solid rgb(0, 0, 0);
+    flex-direction: column;
+    margin: auto;
+}
+
+button{
+    display:flex;
+    margin:auto;
+}
+
+.row {
+    display:flex;
+    background-color:limegreen;
+    size: max-content;
+}
+
+.cell {
+    display:flex;
+    height: 58px;
+    width: 58px;
+    background-color:rgb(163,163,163);
+    border: 1px solid rgb(163,163,163);
+    
+}
+
+.lit {
+    background-color:black;
+}
