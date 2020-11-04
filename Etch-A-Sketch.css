@@ -14,18 +14,28 @@ body {
 button{
     display:flex;
     margin:auto;
+    background-color:rgb(163, 163, 163);
+    border:1px solid black;
 }
+
+button:hover{
+    background-color: black;
+    color: rgb(163, 163, 163);
+}
+
 
 .row {
     display:flex;
     background-color:limegreen;
-    size: max-content;
+    height: 50%;
+
 }
 
 .cell {
     display:flex;
-    height: 58px;
-    width: 58px;
+    width: fit-content;
+    height: fit-content;
+    flex-grow: 1;
     background-color:rgb(163,163,163);
     border: 1px solid rgb(163,163,163);
     

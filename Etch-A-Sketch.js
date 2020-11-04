@@ -1,9 +1,9 @@
 const frame = document.getElementById('frame'); //get the frame
 const grid = document.getElementsByTagName('div'); //get all the cells with div tag
 const button = document.getElementById('reset'); // get a reset ID button
-var size;
+var cellLength;
 
-button.addEventListener('click', () => {clearGrid(), requestSize(), makeGrid(size);}); //listen for the button, clear the grid, build a new grid
+button.addEventListener('click', () => {clearGrid(), requestSize(), makeGrid(cellLength);}); //listen for the button, clear the grid, build a new grid
 
 frame.addEventListener('mouseover', event => { // listen on the frame for any hover
     let target = event.target; //find the target of the hover
@@ -12,10 +12,10 @@ frame.addEventListener('mouseover', event => { // listen on the frame for any ho
 
 
 function requestSize(){
-    var entry = prompt('Enter a whole number greater than 0 and less than 101.')
-    if (entry > 0 && entry <= 100 && entry % 1 ==0) {
+    var entry = prompt('Enter a whole number greater than 1 and less than 101.')
+    if (entry > 1 && entry <= 100 && entry % 1 ==0) {
         console.log('you did it!');
-        size = entry;
+        cellLength = entry;
 
     } else {
         alert ('Invalid Entry. Try again.');
@@ -41,14 +41,15 @@ function clearGrid(){ // new function to remove all div items
     //console.log('cleared!'); // once you're done tell me
 };
 
-function makeGrid(size){ //let's make a grid
+function makeGrid(cellLength){ //let's make a grid
+    
 
-    for(var y=0; y<size; y++){ // Loop this many row containers
+    for(var y=0; y<cellLength; y++){ // Loop this many row containers
 
-        var row = document.createElement('div'); //make a row called div
+        var row = document.createElement('div');
         frame.appendChild(row).className = "row"; // append it to our frame
-        
-        for(var x=0; x<size ; x++){ // now loop through all the column cells called cell
+
+        for(var x=0; x<cellLength ; x++){ // now loop through all the column cells called cell
             
             var cell = document.createElement('div'); // similar as above
             row.appendChild(cell).className = "cell";
