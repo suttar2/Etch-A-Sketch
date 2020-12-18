@@ -1,13 +1,13 @@
 const frame = document.getElementById('frame'); //get the frame
-const grid = document.getElementsByTagName('div'); //get all the cells with div tag
+const grid = document.getElementsByClassName('cell'); //get all the cells with div tag
 const button = document.getElementById('reset'); // get a reset ID button
 var cellLength;
 
-button.addEventListener('click', () => {clearGrid(), requestSize(), makeGrid(cellLength);}); //listen for the button, clear the grid, build a new grid
+button.addEventListener('click', () => {clearGrid(), requestSize(), makeGrid(cellLength)}); //listen for the button, clear the grid, build a new grid
 
 frame.addEventListener('mouseover', event => { // listen on the frame for any hover
     let target = event.target; //find the target of the hover
-    draw(target); // call the draw function on that element
+    if (target.className == 'cell'){draw(target);} // call the draw function on that element
 });
 
 
